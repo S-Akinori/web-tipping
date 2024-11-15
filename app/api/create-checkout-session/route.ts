@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ id: session.id });
-  } catch (error: unknown) {
+  } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
